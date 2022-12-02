@@ -5,8 +5,10 @@ import java.security.MessageDigest
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = File("src", "$name.txt")
-    .readLines()
+fun readInput(day: Int, test: Boolean = false): List<String> {
+    val dayStr = day.toString().padStart(2, '0')
+    return File("src/input/Day$dayStr${if (test) "_test" else ""}.txt").readLines()
+}
 
 /**
  * Converts string to md5 hash.

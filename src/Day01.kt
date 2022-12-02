@@ -36,12 +36,12 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day01_test")
+    val testInput = readInput(1, true)
     (testInput as MutableList<String>).add("")
     check(part1(testInput) == 24000)
     check(part2(testInput) == 45000)
 
-    val input = readInput("Day01")
+    val input = readInput(1)
     (input as MutableList<String>).add("")
     println(part1(input))
     println(part2(input))
